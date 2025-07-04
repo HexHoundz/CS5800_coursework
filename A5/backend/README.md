@@ -40,13 +40,13 @@ Should return:
 cd backend
 npm install
 npm start
-
+```
 ### Tests
 ```bash
 cd backend
 npm install
 npm test
-
+```
 ## Full-stack deployment via Render
 
 Front-end link: https://hexhoundz-frontend-helloworld.onrender.com
