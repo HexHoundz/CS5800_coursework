@@ -46,3 +46,8 @@ npm start
 cd backend
 npm install
 npm test
+
+## Full-stack deployment via Render
+
+Front-end link: https://hexhoundz-frontend-helloworld.onrender.com
+Back-end link: https://hexhoundz-backend.onrender.com/api/hello
