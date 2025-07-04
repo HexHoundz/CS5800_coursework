@@ -1,0 +1,86 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pickup Sports Matcher</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- Title Screen with Logo -->
+  <section class="hero">
+    <img src="logo.png" alt="PSM Logo" class="logo" />
+    <h1>Pickup Sports Matcher (PSM)</h1>
+    <p>Find and join local pickup games near you!</p>
+  </section>
+  <!-- Navigation Bar -->
+  <nav>
+    <ul>
+      <li><a href="#post-game">Post a Game</a></li>
+      <li><a href="#available-games">Available Games</a></li>
+    </ul>
+  </nav>
+  <!-- Hero Section -->
+  <section class="hero">
+
+  </section>
+  <section class="vid">
+    <div class="holder">
+      <video src="sports_demo.mp4" autoplay muted loop playsinline></video>
+    </div>
+    <div class="story">
+      <div>
+        <h2>Welcome to Pickup Sports Matcher</h2>
+      </div>
+      <div>
+        <h2>Your go-to platform for finding and organizing local pickup games.</h2>
+      </div>
+    </div>
+  </section>
+  <!-- Features Section -->
+  <section class="features">
+    <h2>Features</h2>
+    <ul>
+      <li>Post new games easily</li>
+      <li>Browse available games in your area</li>
+      <li>Filter by sport, location, and skill level</li>
+      <li>Join games and meet new people</li>
+    </ul>
+  </section>
+  <!-- Testimonials Section -->
+  <section class="testimonials">
+    <h2>What Our Users Say</h2>
+    <blockquote>
+      <p>"PSM has made it so easy to find games in my area. I've met so many great people!"</p>
+      <footer>- Alex, Basketball Enthusiast</footer>
+    </blockquote>
+    <blockquote>
+      <p>"I love how I can post a game and get players to join quickly. Highly recommend!"</p>
+      <footer>- Jamie, Soccer Player</footer>
+    </blockquote>
+  </section>
+  <!-- Call to Action Section -->
+  <section class="call-to-action">
+    <h2>Join the Fun!</h2>
+    <p>Sign up today and start playing your favorite sports with new friends.</p>
+  </section>
+  <!-- Game Posting and Listing Section -->
+  <div class="container">
+    <h1>Post a New Game</h1>
+    <form id="gameForm">
+      <input type="text" name="sport" placeholder="Sport (e.g., Basketball)" required />
+      <input type="text" name="location" placeholder="Location" required />
+      <input type="datetime-local" name="time" required />
+      <input type="text" name="skill" placeholder="Skill Level (Beginner, Intermediate, etc.)" required />
+      <button type="submit">Post Game</button>
+    </form>
+
+    <h2>Available Games</h2>
+    <div id="gamesList"></div>
+  </div>
+
+  
+
+  <footer>
+    <p>&copy; 2025 Pickup Sports Matcher</p>
+  </footer>

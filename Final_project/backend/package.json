@@ -1,0 +1,21 @@
+{
+  "name": "pickup-sport-matcher-backend",
+  "version": "1.0.0",
+  "description": "PSM backend with unit tests",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"No tests yet\" && exit 0",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "jest": "^27.5.1",
+    "supertest": "^6.3.4"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

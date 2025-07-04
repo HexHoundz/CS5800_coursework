@@ -1,0 +1,260 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #007bff, #00c6ff);
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 20px 40px 20px;
+  background: none;
+  color: white;
+}
+
+.hero .logo {
+  width: 150px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.hero h1, .hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 600px;
+}
+
+/* Navigation Bar */
+nav {
+  background-color: #ffffff;
+  padding: 10px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #0056b3;
+}
+
+/* Sections */
+section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.features ul {
+  list-style-type: disc;
+  padding-left: 40px;
+}
+
+.testimonials blockquote {
+  background-color: #ffffff;
+  padding: 20px;
+  margin: 20px auto;
+  border-left: 5px solid #007bff;
+  font-style: italic;
+  max-width: 700px;
+}
+
+.testimonials h2 {
+  color: #ffffff;
+  max-width: 700px;
+}
+
+.testimonials footer {
+  margin-top: 10px;
+  font-weight: bold;
+  text-align: right;
+}
+
+.call-to-action {
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.call-to-action .cta-button {
+  background-color: white;
+  color: #007bff;
+  padding: 12px 24px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  border-radius: 6px;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.call-to-action .cta-button:hover {
+  background-color: #e6e6e6;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+input, button {
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background: #007bff;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+.game-card {
+  background: #f0f4f8;
+  margin-top: 15px;
+  padding: 20px;
+  border-radius: 6px;
+  border-left: 4px solid #007bff;
+  transition: transform 0.2s;
+}
+
+.game-card:hover {
+  transform: translateY(-5px);
+}
+
+section.vid {
+  height: 3000px;
+  position: relative;
+}
+section.vid div.holder {
+  position: sticky;
+  top: 0;
+}
+
+section.vid video {
+  width: 100%;
+  height: 3000px;
+  object-fit: cover;
+}
+
+section.vid div.story {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: white;
+}
+
+section.vid div.story div{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+  margin-top: 60px;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .hero h1, .hero h2 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
+.features {
+  background: linear-gradient(135deg, #e0f7fa, #ffffff);
+  padding: 40px 20px;
+  margin: 40px auto;
+  max-width: 800px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.features h2 {
+  font-size: 2rem;
+  color: #007bff;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #007bff;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.features ul {
+  list-style: none;
+  padding: 0;
+}
+
+.features ul li {
+  background: #fff;
+  margin: 10px 0;
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  color: #333;
+  box-shadow: 0 2px 8px rgba(0, 123, 255, 0.15);
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.features ul li:hover {
+  transform: scale(1.02);
+  background-color: #f0f8ff;
+}
