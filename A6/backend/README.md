@@ -1,7 +1,7 @@
-# Hello World Web Service – Unit Testing (Assignment 5)
+# Hello World Web Service – Unit Testing (Assignment 6)
 
 ## Overview
-This assignment highlights **full stack deployment** of both the backend and frontend using **Render**.
+This assignment highlights how to setup a **CI/CD pipeline** for both the Backend and Frontend.
 
 ## Running the Project
 
