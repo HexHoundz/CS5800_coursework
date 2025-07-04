@@ -30,14 +30,18 @@ jobs:
 
   frontend-check:
     runs-on: ubuntu-latest
-
-    defaults:
-      run:
-        working-directory: A6/frontend
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Verify frontend HTML exists
-        run: test -f A6/frontend/index.html
+      - name: Print directory tree for debugging
+        run: |
+          echo "Printing repo structure..."
+          ls -R
+          echo "Checking for A6/frontend/index.html..."
+          if [ -f A6/frontend/index.html ]; then
+            echo "index.html found."
+          else
+            echo "index.html not found."
+            exit 1
+          fi
