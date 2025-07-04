@@ -32,7 +32,7 @@ Should return:
 
 ```json
 { "message": "Hello World" }
-
+```
 ## Running the Project
 
 ### Backend
