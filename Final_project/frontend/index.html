@@ -14,29 +14,35 @@
     <p>Find and join local pickup games near you!</p>
   </section>
   <!-- Navigation Bar -->
+  
   <nav>
     <ul>
-      <li><a href="#post-game">Post a Game</a></li>
-      <li><a href="#available-games">Available Games</a></li>
+<nav>
+  <ul>
+    <li><a href="#post-game">Post a Game</a></li>
+    <li><a href="#available-games">Available Games</a></li>
+    <li><span id="authButton"></span></li>
+  </ul>
+</nav>
     </ul>
   </nav>
   <!-- Hero Section -->
   <section class="hero">
+    <section class="vid">
+      <div class="holder">
+        <video src="sports_demo.mp4" autoplay muted loop playsinline></video>
+      </div>
+      <div class="story">
+        <div>
+          <h2>Welcome to Pickup Sports Matcher</h2>
+        </div>
+        <div>
+          <h2>Your go-to platform for finding and organizing local pickup games.</h2>
+        </div>
+      </div>
+    </section>
+  </section>
 
-  </section>
-  <section class="vid">
-    <div class="holder">
-      <video src="sports_demo.mp4" autoplay muted loop playsinline></video>
-    </div>
-    <div class="story">
-      <div>
-        <h2>Welcome to Pickup Sports Matcher</h2>
-      </div>
-      <div>
-        <h2>Your go-to platform for finding and organizing local pickup games.</h2>
-      </div>
-    </div>
-  </section>
   <!-- Features Section -->
   <section class="features">
     <h2>Features</h2>
@@ -60,12 +66,15 @@
     </blockquote>
   </section>
   <!-- Call to Action Section -->
-  <section class="call-to-action">
+  <section class="call-to-action" id="post-game">
     <h2>Join the Fun!</h2>
     <p>Sign up today and start playing your favorite sports with new friends.</p>
   </section>
+  <div id="loginPrompt" style="display: none; text-align: center;">
+    <p>Please <a href="login.html">log in</a> to view and post games.</p>
+  </div>
   <!-- Game Posting and Listing Section -->
-  <div class="container">
+  <div class="container" id="available-games"> 
     <h1>Post a New Game</h1>
     <form id="gameForm">
       <input type="text" name="sport" placeholder="Sport (e.g., Basketball)" required />

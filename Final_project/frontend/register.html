@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Register - PSM</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="login-page">
+  <div class="container">
+    <h2>Register for Pickup Sports Matcher</h2>
+    <form id="registerForm">
+      <input type="text" name="username" placeholder="Username" required />
+      <input type="password" name="password" placeholder="Password" required />
+      <input type="text" name="location" placeholder="Your City or Zip Code" required />
+      <button type="submit">Register</button>
+    </form>
+    <p id="registerMsg"></p>
+    <p>Already have an account? <a href="login.html">Login here</a></p>
+  </div>
+
+  <script>
+    const API_BASE = 'http://localhost:4000';
+
+    document.getElementById('registerForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const formData = new FormData(e.target);
+      const body = JSON.stringify(Object.fromEntries(formData.entries()));
+
+      try {
+        const res = await fetch(`${API_BASE}/api/register`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          credentials: 'include',
+          body
+        });
+
+        const msg = document.getElementById('registerMsg');
+
+        if (res.ok) {
+          msg.textContent = 'Registration successful! Redirecting to login...';
+          msg.style.color = 'green';
+          setTimeout(() => window.location.href = 'login.html', 1000);
+        } else {
+          const error = await res.json();
+          msg.textContent = error.error || 'Registration failed.';
+          msg.style.color = 'red';
+        }
+      } catch (err) {
+        console.error('Error:', err);
+        document.getElementById('registerMsg').textContent = 'Something went wrong.';
+      }
+    });
+  </script>
+</body>
+</html>
