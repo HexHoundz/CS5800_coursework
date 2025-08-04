@@ -22,7 +22,7 @@
   </div>
 
   <script>
-    const API_BASE = 'http://localhost:4000';
+    const API_BASE = 'https://pickup-sports-matcher.onrender.com';
 
     async function checkSessionAndRedirect() {
       const res = await fetch(`${API_BASE}/api/me`, { credentials: 'include' });
