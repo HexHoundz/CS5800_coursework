@@ -14,9 +14,10 @@ let games = []; // { sport, location, time, skill, coords, postedBy }
 // }));
 
 app.use(cors({
-  origin: 'http://localhost:5500', // change from 'null'
+  origin: 'https://psm-viewer.onrender.com', // change from 'null'
   credentials: true
 }));
+
 
 app.use(express.json());
 app.use(session({
@@ -24,6 +25,8 @@ app.use(session({
   resave: false,
   saveUninitialized: true
 }));
+
+app.set('trust proxy', 1);
 
 function geocodeLocation(address) {
   const url = `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(address)}`;

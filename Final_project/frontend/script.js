@@ -1,7 +1,7 @@
 // const API_BASE = location.hostname === 'localhost'
 //   ? 'http://localhost:5500'
 //   : 'https://your-backend-url.onrender.com'; // replace this with real backend URL
-const API_BASE = 'http://localhost:4000';
+const API_BASE = 'https://pickup-sports-matcher.onrender.com';
 
 function haversineDistance(lat1, lon1, lat2, lon2) {
   const R = 6371;
